@@ -31,7 +31,7 @@ PROGS	= build/bank.lib.r build/main.prg
 DEMOSRC = demo/main.p8 demo/libbank.p8 demo/lib.p8 demo/bank.lib.p8
 SRCS	= src/reu.p8 src/reucompat.p8
 
-all: copy build $(PROGS)
+all: build copy $(PROGS)
 
 build:
 	$(MD) build/
