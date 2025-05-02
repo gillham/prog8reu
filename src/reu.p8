@@ -2,9 +2,10 @@
 ; C64 REU banking.
 ;
 
-%import textio
+;%import textio
 
 reu {
+%option force_output    ; avoids circular reference issue
 
     ; memory-mapped ubyte
     &ubyte reu_status           = $df00 ; read-only
