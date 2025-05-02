@@ -1,3 +1,6 @@
+%import diskio
+%import strings
+
 c64 {
 %option merge
     ; replace default routine with one that checks for reu banks
