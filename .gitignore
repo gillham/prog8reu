@@ -1,0 +1,8 @@
+# Vice REU file
+reu-image.bin
+
+# build artifacts
+build/
+
+# random "saved" files
+save/
