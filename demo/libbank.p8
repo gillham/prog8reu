@@ -1,5 +1,5 @@
 ;
-; Client side linkage for a C64 module in $A000 banked memory
+; Client side linkage for a C64/C128 module in $A000 banked memory
 ;
 
 %import lib
@@ -13,9 +13,6 @@ libbank {
     extsub loadaddr + $0c = multiply(ubyte arg0 @A, ubyte arg1 @Y, uword resultptr @R15)
     extsub loadaddr + $0f = args(ubyte arg0 @A, ubyte arg1 @Y) -> ubyte @A, ubyte @Y
 
-    ; library filename
-    str library = "bank.lib.r"
-
     ; unload (free) resources from load
     ; (only if allocated somehow)
     sub unload() -> bool {
@@ -23,10 +20,9 @@ libbank {
     }
 
     ; use lib.loadbank() to load into loaddr ($A000 above)
-    sub load() -> bool {
+    sub load(str library) -> bool {
         bool result = lib.loadbank(loadaddr, library, true)
         ; cleanup.
         return result
     }
-
 }
