@@ -16,7 +16,7 @@ else
 endif
 
 # disk image settings
-DISKTYPE=d81
+DISKTYPE=d71
 DISKNAME=demoreu
 DISK=build/$(DISKNAME).$(DISKTYPE)
 
@@ -24,7 +24,7 @@ DISK=build/$(DISKNAME).$(DISKTYPE)
 EMU_CMD=x64sc
 EMU_CMD128=x128
 EMU_BASE=-default -keymap 1 -model ntsc
-EMU_DISK08=-8 $(DISK) -drive8type 1581
+EMU_DISK08=-8 $(DISK) -drive8type 1571
 EMU_DISK10=-fs10 build -device10 1 -iecdevice10 -virtualdev10
 EMU_DISK=$(EMU_DISK08) $(EMU_DISK10)
 #EMU_KERNAL=-kernal jiffykernal
